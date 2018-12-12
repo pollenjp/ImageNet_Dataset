@@ -46,3 +46,11 @@ wget http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_test.t
 ```
 
 
+## make dataset
+
+```
+python3 make_csv_dataset.py \
+  --search_path=./ILSVRC2012/ILSVRC2012_img_train \
+  --wnid_label_filepath=./wnid_label.csv \
+  --output_filepath=./train_dataset.csv
+```

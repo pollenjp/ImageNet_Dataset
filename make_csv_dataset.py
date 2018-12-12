@@ -23,7 +23,7 @@ if __name__ == "__main__":
     with open(file=wnid_label_filepath, mode="rt") as f:
         lines = csv.reader(f)
         wnid_label_dict = {rows[0]:rows[1] for rows in lines}
-        label_wnid_dict = {rows[1]:rows[0] for rows in lines}
+        #label_wnid_dict = {rows[1]:rows[0] for rows in lines}
 
     # search and append to CSV file
     if os.path.exists(output_file):

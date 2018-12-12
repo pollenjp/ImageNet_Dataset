@@ -54,3 +54,13 @@ python3 make_csv_dataset.py \
   --wnid_label_filepath=./wnid_label.csv \
   --output_filepath=./train_dataset.csv
 ```
+
+
+## resize
+
+```
+python3 resize_image.py \
+  --imagepath_filepath=train_dataset.csv
+```
+
+

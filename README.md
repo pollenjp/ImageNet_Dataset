@@ -1,11 +1,8 @@
-
-- http://www.image-net.org/challenges/LSVRC/2012/nonpub-downloads
-- [CaffeによるILSVRC2012の実行 - Qiita](https://qiita.com/htsst/items/2d69428cc538b5fa7497)
+# ImageNet Dataset
 
 ```
 mkdir ILSVRC2012
 ```
-
 
 ## Development Kit
 
@@ -62,5 +59,12 @@ python3 make_csv_dataset.py \
 python3 resize_image.py \
   --imagepath_filepath=train_dataset.csv
 ```
+
+
+## 参考
+- http://www.image-net.org/challenges/LSVRC/2012/nonpub-downloads
+- [CaffeによるILSVRC2012の実行 - Qiita](https://qiita.com/htsst/items/2d69428cc538b5fa7497)
+- https://gist.github.com/aaronpolhamus/964a4411c0906315deb9f4a3723aac57
+
 
 

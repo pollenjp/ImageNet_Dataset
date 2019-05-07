@@ -1,5 +1,8 @@
 # ImageNet Dataset
 
+- http://image-net.org/download-imageurls
+- BoundingBox : http://image-net.org/download-bboxes.php
+
 ```
 mkdir ILSVRC2012
 ```
@@ -12,12 +15,14 @@ mkdir ILSVRC2012
 
 ```
 $ mkdir ILSVRC2012/ILSVRC2012_img_train
-$ wget http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_train.tar    --output-file=ILSVRC2012/ILSVRC2012_img_train/ILSVRC2012_img_train.tar
+$ wget ¥
+    http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_img_train.tar ¥
+    --output-file=ILSVRC2012/ILSVRC2012_img_train/ILSVRC2012_img_train.tar
 $ md5sum ILSVRC2012_img_train.tar
 1d675b47d978889d74fa0da5fadfb00e  ILSVRC2012_img_train.tar
 ```
 
-以下の`md5sum`も意外と時間がかかる
+`md5sum`も意外と時間がかかる
 
 ## 展開
 
@@ -51,6 +56,20 @@ python3 make_csv_dataset.py \
 python3 resize_image.py \
   --imagepath_filepath=train_dataset.csv
 ```
+
+
+## Bounding Box
+
+```
+mkdir Annotation
+wget http://image-net.org/Annotation/Annotation.tar.gz --output-file=Annotation/Annotation.tar.gz
+cd Annotation
+tar -zxvf Annotation.tar.gz 
+rm Annotation.tar.gz
+ls -1 | xargs -I{} tar -zxvf {}
+```
+
+するとさらに下の`Annotation/`に展開される.
 
 
 ## 参考
